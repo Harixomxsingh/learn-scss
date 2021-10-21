@@ -68,3 +68,36 @@ body {
   background-color: $bg-lightblue;
 }
 ```
+
+## map
+
+if you familyer with javascript then you can campare to array, maps are list key value pare.
+
+```scss
+//map
+$font-weight: (
+  "small": 200,
+  "medium": 400,
+  "bold": 600,
+);
+
+h1 {
+  font-weight: map-get($font-weight, bold);
+}
+```
+
+## nesting
+
+nesting is the best part of scss
+
+```scss
+//nesting
+.main {
+  width: 80%;
+  margin: 0 auto;
+  p {
+    text-align: center;
+    color: $txt-color;
+  }
+}
+```
