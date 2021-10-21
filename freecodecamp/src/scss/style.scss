@@ -9,6 +9,20 @@
   @return map-get($font-weight, $weight_name);
 }
 
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  gap: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+// mixin example 2
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
 body {
   background-color: $bg-lightblue;
 }
@@ -22,5 +36,13 @@ h1 {
   p {
     text-align: center;
     color: $txt-color;
+  }
+}
+
+// using mixin
+.card {
+  @include flexCenter(row);
+  @include mobile {
+    @include flexCenter(column);
   }
 }

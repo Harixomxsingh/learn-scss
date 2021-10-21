@@ -142,3 +142,63 @@ h1 {
   text-align: center;
 }
 ```
+
+## Mixin
+
+Mixin is kind of same thing as function.
+basically mixin is a way to write DRY(DON'T REPEAT YOURSELF) code. imagine that we ne to type flex jcc aic 3 time i need mixin and then include it when i want to use.
+
+```scss
+// define a mixin
+@mixin flexCenter {
+  display: flex;
+  flex-direction: row;
+  gap: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+// then include where you want the flexCenter mixin
+// using mixin
+.card {
+  @include flexCenter();
+}
+```
+
+we can use value as parameter
+
+```scss
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  gap: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  @include flexCenter(row);
+}
+```
+
+### mixin example 2
+
+```scss
+//_variable.scss
+$mobile: 800px;
+
+// style.scss
+// mixin example 2
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+.card {
+  @include flexCenter(row);
+  @include mobile {
+    @include flexCenter(column);
+  }
+}
+```
