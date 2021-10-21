@@ -1,0 +1,26 @@
+// partials
+// to include the file we use @import file directory
+
+@import "./resets";
+@import "./variable";
+
+// function
+@function weight($weight_name) {
+  @return map-get($font-weight, $weight_name);
+}
+
+body {
+  background-color: $bg-lightblue;
+}
+h1 {
+  font-weight: weight(bold);
+  text-align: center;
+}
+
+//nesting
+.main {
+  p {
+    text-align: center;
+    color: $txt-color;
+  }
+}

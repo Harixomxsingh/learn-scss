@@ -101,3 +101,44 @@ nesting is the best part of scss
   }
 }
 ```
+
+## Partials
+
+a partials is simply a sass file name with a leading @ , so the @ let sass know that the file is a partials
+
+basically it mean we add another scss file into our scss file
+
+- first create a scss file
+- then import into main scss file
+
+```scss
+// _resets.scss
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// import into main scss file
+
+// partials
+// to include the file we use @import file directory
+
+@import "./resets";
+```
+
+## function
+
+if you know about javascript function then the sass function the kind of same thing.
+
+```scss
+// function
+@function weight($weight_name) {
+  @return map-get($font-weight, $weight_name);
+}
+
+h1 {
+  font-weight: weight(bold);
+  text-align: center;
+}
+```
