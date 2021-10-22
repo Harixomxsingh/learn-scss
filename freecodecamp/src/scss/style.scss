@@ -37,6 +37,9 @@ h1 {
     text-align: center;
     color: $txt-color;
   }
+  &:hover {
+    color: pink;
+  }
 }
 
 // using mixin
@@ -44,5 +47,10 @@ h1 {
   @include flexCenter(row);
   @include mobile {
     @include flexCenter(column);
+  }
+  p {
+    &:hover {
+      color: pink;
+    }
   }
 }

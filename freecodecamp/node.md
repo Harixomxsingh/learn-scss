@@ -202,3 +202,11 @@ $mobile: 800px;
   }
 }
 ```
+
+This is the basis of scss i know i miss some topic but we can cover letter,
+
+- SASS is very powerful once you learn at all then you don't go to the normal css.
+
+to learn for about SASS go to the sass website
+
+[SASS WEBSITE](https://sass-lang.com/documentation);
