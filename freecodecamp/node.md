@@ -6,6 +6,8 @@
 
 its is a css extension language, its give you css super power, once you see that how easy to write and how logical and orgranige it is, you never write plan css again.
 
+**Sass (short for syntactically awesome style sheets)**
+
 ## SETUP
 
 - vscode
